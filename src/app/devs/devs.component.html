@@ -1,0 +1,17 @@
+<a href = "/donuts">To Donuts!</a>
+
+<div *ngFor="let d of devs?.complete">
+    <sprk-accordion>
+        <sprk-accordion-item
+          title="{{d.firstName}} {{d.lastName}}"
+          additionalClasses="sprk-u-mbs"
+          additionalHeadingClasses="sprk-b-TypeDisplaySeven"
+          idString="accordion-item-1"
+          analyticsString="object.action.event"
+        >
+          <p>
+            <app-dev-detail [myDev]="d"></app-dev-detail>
+          </p>
+        </sprk-accordion-item>  
+    </sprk-accordion>
+</div>
